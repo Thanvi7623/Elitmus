@@ -29,7 +29,7 @@ input:focus {
   {% with messages = get_flashed_messages() %}
 	  {% if messages %}
 		{% for message in messages %}
-		<div class="alert">
+		<div class="alert" style="color:white; font-size:50px">
 		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
 			<p align="center">{{ message }}</p>
 		</div>
@@ -37,7 +37,7 @@ input:focus {
 	  {% endif %}
 	{% endwith %}
 	  {% if info %}
-	  <div class="alert">
+	  <div class="alert" style="color:white; font-size:50px">
 		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
 			<p align="center">{{ info }}</p>
 		</div>
