@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+		<link rel="stylesheet" href="{{url_for('static', filename = 'app.css') }}" media="screen">
+                <link rel="icon" type="jpeg" href="{{url_for('static', filename = 'images/trivia_lo1.jpeg') }}">
+
+</head>
+
+<body>
+	<style>
+	.alert {
+  		padding: 5px;
+		margin: 50px;
+  		background-color: #f44336;
+  		color: white;
+	}
+
+	.closebtn {
+  		margin-left: 15px;
+  		color: white;
+  		font-weight: bold;
+  		float: right;
+  		font-size: 22px;
+ 		line-height: 20px;
+ 		cursor: pointer;
+		transition: 0.3s; 
+	}
+
+	.closebtn:hover {
+		  color: black;
+	}	
+</style>
+
+  {% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		{% for message in messages %}
+		<div class="alert">
+		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			<p align="center">{{ message }}</p>
+		</div>
+		{% endfor %}
+	  {% endif %}
+	{% endwith %}
+	  {% if info %}
+	  <div class="alert">
+		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			<p align="center">{{ info }}</p>
+		</div>
+	  {% endif %}
+      <div class="container">
+        <!-- Left section of signup form -->
+        <dive>
+            <b><h1 style="color: rgb(13, 249, 249); text-align: center;">Admin Log In</h1></b>
+            <form action="{{url_for('admin_login')}}" method="post">
+             
+             <div>
+                <p><label for="user">Email Address</label></p>
+                <input type="text" id="PEmail" name="user" required autocomplete="off">
+             </div>
+             
+             <div>
+			<p><label for="pwd">Password</label></p>
+			<input type="password" name="pwd" required>
+			</div>
+             <br>
+             <br>
+             <div class="row">
+             <input type="submit" name="Submit" style="margin: 0 auto">
+             </div>
+             
+            </form>
+        </dive>
+        
+        <!-- Right section of the form containing image -->
+    </div>
+
+
+</body>
+</html>

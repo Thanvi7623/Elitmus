@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Sign Up</title>
+
+                <link rel="stylesheet" href="{{url_for('static', filename = 'app.css') }}" media="screen">
+                <link rel="icon" type="jpeg" href="{{url_for('static', filename = 'images/trivia_lo1.jpeg') }}">
+           <style>
+            
+            input{
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    background-color: #FBFBFB;
+    position:relative;
+    top: -10px;
+    padding: 5px;
+}
+input:focus {
+    outline: none !important;
+    border-bottom: 1px solid rgb(50, 155, 203);
+    font-size: 14px;
+    font-weight: bold;
+}
+           </style>
+</head>
+<body>
+    <div class="container" style="color: aqua;">
+        <!-- Left section of signup form -->
+        <dive>
+            <b><h1 style="color: rgb(230, 238, 238);">Sign Up</h1></b>
+            <h2>Welcome to Treasure Hunt</h2>
+            <form action="{{url_for('signup')}}" method="post">
+             <div>
+                <p><label for="userName">User Name</label></p>
+                <input type="text" id="Pname" name="Pname" required autocomplete="off" >
+             </div>
+             <div>
+                <p><label for="email">Email Address</label></p>
+                <input type="email" id="PEmail" name="PEmail" required autocomplete="off">
+             </div>
+             <div>
+                <p><label for="Phno">Phone Number</label></p>
+                <input type="tel" id="Phno" name="Phno" required autocomplete="off">
+             </div>
+			 <div>
+                <p><label for="age">Age</label></p>
+                <input type="number" id="PAge" name="PAge" required autocomplete="off">
+             </div>
+             <div>
+			<p><label for="pwd">Password</label></p>
+			<input type="password" name="Pwd" required>
+			</div>
+             <br>
+             <br>
+             <div class="row">
+             <input type="submit" name="Sign Up" style="margin: 0 auto">
+             </div>
+             <p style="text-align: center; color:aliceblue">Already a member? <a href="/login">Log in</a></p>
+            </form>
+        </dive>
+        
+        <!-- Right section of the form containing image -->
+    </div>
+</body>
+</html>

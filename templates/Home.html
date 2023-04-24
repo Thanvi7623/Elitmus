@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Treasure Hunt</title>
+                <link rel="stylesheet" href="{{url_for('static', filename = 'app.css') }}" media="screen">
+                <link rel="icon" type="jpeg" href="{{url_for('static', filename = 'images/trivia_lo1.jpeg') }}">
+                <style>
+                body{
+                    background-image:url(https://thumbs.dreamstime.com/b/old-map-vintage-travel-equipment-expedition-concept-treasure-hunt-old-map-vintage-travel-equipment-expedition-concept-133932664.jpg)
+                }
+                h1 {text-align: center;}
+                p {text-align: center;}
+                div {text-align: center;}
+                .con{
+                    background-position: center;
+                    background-image: url(https://images.pexels.com/photos/366791/pexels-photo-366791.jpeg?cs=srgb&dl=pexels-david-bartus-366791.jpg&fm=jpg);
+                    margin: 0 auto;
+                    max-width: 650px;
+                    height: 500px;
+                    text-align: center;
+                    margin-top: 90px;
+                    background-size: cover;
+                    display: flex;
+                }
+                .heading1{
+		            float: right;
+                    padding-right: 20px;
+	            }   
+    .heading1 a:link, a:active, a:visited, a:hover{
+		text-decoration: none;
+        text-align: right;
+	}
+    .heading{
+		display: flex;
+	}
+	.heading h1{
+		flex-grow: 1;
+	}
+	.heading button{
+		margin-top: 35px;
+	}
+	.heading a:link, a:active, a:visited, a:hover{
+		text-decoration: none;
+	}
+	.p a:link, a:active, a:visited, a:hover{
+		text-decoration: none;
+	}
+    .p{
+        display: inline;
+    }
+    </style>
+                                
+</head>
+<body>
+<div class="heading">
+        <h1  style="color: #cdc1c1; text-align:center; font-size: 50px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Treasure Hunt</h1>    
+        <div class="heading1"><button style="background-color: #fafafb; padding: 9px; border-radius: 5px;"><a style="color: black"href="/admin_login">Admin Log In</a></button></div>
+        </div>
+    <div class="con" style="color: white" >
+        <!-- Left section of signup form -->
+        <div>
+            <h1 style="color: rgba(255, 255, 255);">&nbsp;WELCOME TO THE TREASURE HUNT GAME</h1>
+            <br><br>
+            <h2 style="color:rgba(221, 228, 29, 0.747)">This Game contains Logical Thinking and Aptitude based questions</h2>
+            <br>
+            <br>
+            <br>
+            <i><h2 style="color:rgba(223, 223, 201, 0.889)">To start the Game: Sign up or Login</h2></i>
+            <div class="p">
+            <h2><p><button style="background-color: rgb(255, 255, 255); padding: 15px; border-radius: 10px;"><a style="color: black"href="/signup">Sign Up</a></button><button style="background-color: rgb(255, 255, 255); padding: 15px; border-radius: 10px;"><a style="color: black" href="/login">Log In</a></button></p></h2>
+            </div>
+        </div>
+    </div>
+</body>

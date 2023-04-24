@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Admin</title>
+<link rel="stylesheet" href="{{url_for('static', filename = 'app.css') }}" media="screen">
+<link rel="icon" type="jpeg" href="{{url_for('static', filename = 'images/trivia_lo1.jpeg') }}">
+
+
+</head>
+
+<style>
+		
+		table, td, th, tr {
+  border: 1px solid;
+			padding: 10px 5px;
+}
+input{
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    background-color: #FBFBFB;
+    position:relative;
+    top: -10px;
+    padding: 5px;
+}
+input:focus {
+    outline: none !important;
+    border-bottom: 1px solid rgb(50, 155, 203);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+		tr:hover {background-color: #f4f1f1;}
+table {
+  width: 100%;
+  background-color: white;
+  justify-content: center;
+  margin: auto;
+  border-collapse: collapse;
+  align-items: center;
+	text-align: center;
+}
+	</style>
+
+<style>
+	.heading{
+		display: flex;
+	}
+	.heading h1{
+		flex-grow: 1;
+	}
+	.heading button{
+		margin-top: 25px;
+	}
+	.heading a:link, a:active, a:visited, a:hover{
+		text-decoration: none;
+	}
+    .cont{
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 750px;
+    height: 530px;
+    margin-top: 100px;
+    background-color: #ece6e6;
+    display: flex;
+}
+	
+	</style>		
+	
+<body  style="padding: 1% 5%">
+	<div class="heading">
+	<h1 style="text-align:center; color: #b38f8f"><strong>Treasure Hunt</strong></h1>
+	<button style="background-color: #d7cece; padding: 5px 10px; border-radius: 5px;"><a style="color: black;" href="/logout">Logout</a></button>
+	</div>
+    <h2 style="color: #ebe2e2; text-align:center;"><strong>Players Analysis Report</strong></h2>
+    
+	
+	<table>
+	<thead style="background-color: #2f887d">
+		<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Phone Number</th>
+		<th>Age</th>
+		<th>Time Taken</th>
+		<th>Score</th>
+		</tr>
+		</thead>
+	<tbody>
+	{% for record in records %}
+	<tr>
+		<td>{{record[1]}}</td>
+		<td>{{record[2]}}</td>
+		<td>{{record[3]}}</td>
+		<td>{{record[4]}}</td>
+		<td>{{record[8][0]}} Hours, {{record[8][1]}} Minutes, {{record[8][2]}} Seconds</td>
+		<td>{{record[7]}}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+	</table>
+	
+</body>
+</html>

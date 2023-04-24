@@ -1,0 +1,113 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    background-image: url(https://images.pexels.com/photos/3934623/pexels-photo-3934623.jpeg?cs=srgb&dl=pexels-ave-calvar-martinez-3934623.jpg&fm=jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container{
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 650px;
+    height: 550px;
+    margin-top: 100px;
+    background-image: url(https://thumbs.dreamstime.com/b/old-map-vintage-travel-equipment-expedition-concept-treasure-hunt-old-map-vintage-travel-equipment-expedition-concept-133932664.jpg);
+    background-color: #ece6e6;
+    display: flex;
+}
+
+a{
+    color: rgb(222, 214, 214);
+    font-size: larger;
+}
+
+.section2{
+    width: 50%;  
+}
+.section2 > img{
+    width: 100%;
+    height: 100%;
+    margin: 10px 0px 0px 8px;
+}
+h5{
+    margin-top: -12px;
+}
+label{
+    text-transform: uppercase;
+    font-size: 12px;
+    color: rgb(227, 218, 218);
+}
+
+#password:focus{
+    color: rgb(37, 119, 186);
+    font-size: 16px;
+    font-weight: bold;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+input[type=submit] {
+    background-color: #3a1cbe;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin: 0 auto;
+    text-align: center;
+  }
+.sub{
+    border: none;
+    background-color: rgb(51, 115, 194);
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    width: 120px;
+    margin-top: 15px;
+}
+p{
+    font-size: small;
+}
+.line{
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    margin-top: 50px;
+}
+.socialIcons{
+    display: flex;
+    margin-top: 5px;
+}
+.icon{
+    margin: 10px 7px;
+    position: relative;
+    left: 30px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid black;
+    font-size: 12px;
+    line-height: 25px;
+}
+.fab{
+    position: relative;
+    left: 6px;
+}
+.fb > .fab {
+    position:relative;
+    left: 8px;
+}
+h6{
+    position:relative;
+    top: -8px;
+    font-size: 12px;
+}
+.icon:hover, #btn:hover{
+    box-shadow: 0 0 25px rgba(8, 8, 8, 0.2);
+    background-color: rgb(182, 49, 93);
+}

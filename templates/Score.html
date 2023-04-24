@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Score</title>
+<link rel="stylesheet" href="{{url_for('static', filename = 'app.css') }}" media="screen">
+<link rel="icon" type="jpeg" href="{{url_for('static', filename = 'images/trivia_lo1.jpeg') }}">
+
+
+</head>
+<style>
+    .container1{
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 650px;
+    height: 560px;
+    margin-top: 60px;
+    background-color: #ece6e6;
+    display: flex;
+}
+	a:link, a:active, a:visited, a:hover{
+		text-decoration: none;
+	}
+    .heading1{
+		            float: right;
+                    padding-right: 20px;
+	            }   
+    .heading1 a:link, a:active, a:visited, a:hover{
+		text-decoration: none;
+        text-align: right;
+	}
+    .heading{
+		display: flex;
+	}
+	.heading h1{
+		flex-grow: 1;
+	}
+	.heading button{
+		margin-top: 35px;
+	}
+	.heading a:link, a:active, a:visited, a:hover{
+		text-decoration: none;
+	}
+</style>	
+<body>
+    <div class="heading">
+        <h1  style="color: #cdc1c1; text-align:center; font-size: 50px;">&nbsp;&nbsp;Treasure Hunt</h1>    
+        <div class="heading1"><button style="background-color: #405d81; padding: 9px; border-radius: 5px;"><a href="/">Log Out</a></button></div>
+        </div>
+	<div class="container1" style="text-align: center;">
+        <!-- Left section of signup form -->
+        <dive>
+	    <p><h1>The results of your assessment can be viewed here.</h1></p>
+    {% if score == 5 %}
+            <h2><p><strong>Congratulations, You won The Treasure!!</strong></p></h2>
+            <img src="{{url_for('static', filename='images/Treasure.jpg')}}">
+    {% elif score == 4 %}
+            <p><b><h2>Oh No! That was so Close.</h2></b></p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXeL1Zonb7WjrdVrCQYKjHuFDmWqfh9Wo8Z6hjNt3qxA&usqp=CAU&ec=48665701">
+    {% elif score == 3 %}
+            <p><b><h2>How about one more attempt? There is potential for improvement.</h2></b></p>
+            <img src="{{url_for('static',filename='images/rsz_you.jpg')}}">
+    {% else %}
+            <p><b><h2>Better Luck Next Time.</h2></b></p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0UXP1rsZ2c9tzaalkAi6X8HQk2d7nG8L7duTyZYA3AQ&usqp=CAU&ec=48665701">
+    {% endif %}
+    
+    <br>        
+	<p><h3><strong>Your Score</strong> : {{score}} points out of 5</h3></p>
+	<p><h3><strong>Time Taken</strong> : {{time[0]}} Hours, {{time[1]}} Minutes, {{time[2]}} Seconds <br><br></h3></p>
+	<button style="background-color: #867c7c; border-radius: 5px; padding: 5px"><a href="/game">Play Again</a></button>
+	</dive>
+</div>
+</body>
+</html>
